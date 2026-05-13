@@ -1,5 +1,3 @@
-from pathlib import Path
-
 from fastapi.testclient import TestClient
 
 from src.app import app
@@ -16,10 +14,12 @@ def test_index_has_dark_mode_toggle():
 
 
 def test_dark_mode_styles_and_script_exist():
-    project_root = Path(__file__).resolve().parents[1]
-    styles = (project_root / "src" / "static" / "styles.css").read_text()
-    script = (project_root / "src" / "static" / "app.js").read_text()
+    client = TestClient(app)
+    styles = client.get("/static/styles.css")
+    script = client.get("/static/app.js")
 
-    assert "body.dark-mode" in styles
-    assert "theme-toggle" in script
-    assert "localStorage" in script
+    assert styles.status_code == 200
+    assert script.status_code == 200
+    assert "body.dark-mode" in styles.text
+    assert "theme-toggle" in script.text
+    assert "localStorage" in script.text

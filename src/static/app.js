@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggle.setAttribute("aria-pressed", String(isDarkMode));
   }
 
-  setTheme(localStorage.getItem(themeStorageKey) || "light");
+  const savedTheme = localStorage.getItem(themeStorageKey);
+  setTheme(savedTheme === "dark" ? "dark" : "light");
 
   themeToggle.addEventListener("click", () => {
     const nextTheme = document.body.classList.contains("dark-mode") ? "light" : "dark";
