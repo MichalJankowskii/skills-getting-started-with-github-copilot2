@@ -12,18 +12,18 @@ body {
   margin: 0 auto;
   padding: 20px;
   background:
-    radial-gradient(circle at top, rgba(255, 214, 102, 0.25), transparent 30%),
-    linear-gradient(180deg, #f7f4ea 0%, #edf3f8 100%);
+    radial-gradient(circle at top, rgba(255, 105, 180, 0.3), transparent 30%),
+    linear-gradient(180deg, #fff0f7 0%, #ffe4f1 100%);
 }
 
 header {
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
-  background: linear-gradient(135deg, #12355b, #1f6f78);
+  background: linear-gradient(135deg, #c2185b, #ec407a);
   color: white;
   border-radius: 18px;
-  box-shadow: 0 16px 32px rgba(18, 53, 91, 0.18);
+  box-shadow: 0 16px 32px rgba(194, 24, 91, 0.25);
 }
 
 header h1 {
@@ -160,7 +160,7 @@ section h3 {
 }
 
 button {
-  background: linear-gradient(135deg, #12355b, #1f6f78);
+  background: linear-gradient(135deg, #c2185b, #ec407a);
   color: white;
   border: none;
   padding: 10px 15px;
@@ -168,12 +168,12 @@ button {
   border-radius: 999px;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 12px 24px rgba(18, 53, 91, 0.2);
+  box-shadow: 0 12px 24px rgba(194, 24, 91, 0.25);
 }
 
 button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 16px 28px rgba(18, 53, 91, 0.26);
+  box-shadow: 0 16px 28px rgba(194, 24, 91, 0.32);
 }
 
 .message {
