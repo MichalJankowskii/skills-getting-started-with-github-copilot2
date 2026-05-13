@@ -8,7 +8,7 @@ from src.app import app
 def test_index_has_dark_mode_toggle():
     client = TestClient(app)
 
-    response = client.get("/static/index.html")
+    response = client.get("/")
 
     assert response.status_code == 200
     assert 'id="theme-toggle"' in response.text
